@@ -1,0 +1,51 @@
+        <form method="get" action="/rooms/">
+            <fieldset>
+                <legend>GET</legend>
+                <dl>
+                    <dt>Room ID (Leave empty for all)</dt>
+                    <dd>
+                        <select id="gid" name="_id">
+                            <option/>
+                            <% for (var i = 0; i < items.length; i++) {%>
+                                <option value=<%=items[i]['_id']%>><%=items[i]['name']+' '+items[i]['type']+' ('+items[i]['_id']+')'%></option>
+                            <%}%>
+                        </select>
+                    </dd>    
+                    <dt>Status (Leave empty for all)</dt>
+                    <dd><select id="status" name="status"><option/><option>available</option><option>taken</option><option>reserved</option></select></dd>
+                    <dt>Room Type (Leave empty for all)</dt>
+                    <dd>
+                        <select id="t" name="type">
+                            <option/>
+                            <% for (var i = 0; i < types.length; i++) {%>
+                                <option><%=types[i]%></option>
+                            <%}%>
+                        </select>
+                    </dd>    
+                </dl>
+                <input type="submit" value="GET"/>
+            </fieldset>
+        </form> 
+        <form method="post" action="/rooms/">
+            <fieldset>
+                <legend>POST</legend>
+                <dl>
+                    <dt>Room ID</dt>
+                    <dd>
+                        <select id="pid" name="_id">
+                            <% for (var i = 0; i < items.length; i++) {%>
+                                <option value=<%=items[i]['_id']%>><%=items[i]['name']+' '+items[i]['type']+' ('+items[i]['_id']+')'%></option>
+                            <%}%>
+                            <option value="999">Bogus Huddle (999)</option>
+                        </select>
+                    </dd>    
+                    <dt>Status (Ignored if the Reserve field populated)</dt>
+                    <dd><select id="s" name="status"><option/><option>available</option><option>taken</option></select></dd>
+                    <dt>SubStatus (Ignored if the Reserve field populated)</dt>
+                    <dd><input id="ss" name="substatus"/></dd>
+                    <dt>Reserve (number of minutes)</dt>
+                    <dd><input type="number" id="reserve" name="reserve" min="1" max="480" /></dd>
+                </dl>
+               	<input type="submit" value="POST"/>
+            </fieldset>
+        </form>

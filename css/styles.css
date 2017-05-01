@@ -1,0 +1,80 @@
+h1{
+	text-align:center;
+}
+
+.room_container{
+	background: none repeat scroll 0 0 #F3F4F4;
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+}
+#room_chart {
+    border-color: #B0ACAC;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 10px 10px 10px -4px #CCCCCC;
+    font-size: 0.85em;
+    margin: 50px auto;
+    padding: 10px;
+    width: 500px;
+	background-color:#ffffff;
+}
+
+.room_info {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #f4f4f4;
+    border-color: #A2A1A1 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: thin medium;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.room_name {
+    float: left;
+    width: 60%;
+}
+
+.action {
+    float: left;
+    margin-top: -2px;
+    width: 35%;
+}
+.action button {
+    background: none repeat scroll 0 0 #8D8892;
+    border: medium none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    padding: 3px;
+}
+
+.action button:active {
+    background: none repeat scroll 0 0 #DED9D9;
+}
+#refresh {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.room_label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+#last_refreshed {
+    text-align: center;
+}
+#problem_link {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 0;
+    position: relative;
+    text-align: right;
+    top: 20px;
+    width: 95%;
+}

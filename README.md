@@ -1,0 +1,1 @@
+# Huddle app looks at Smartthings sensors to broadcast the status of a room using motion detectors. The Node.js REST API makes calls to this API to continually poll the room status and modify a visual map regarding the status of the room. The Node.js API also allows rooms to be reserved and checked.
